@@ -1,0 +1,31 @@
+:root {
+    --primary-100:#E84545;
+    --primary-200:#903749;
+    --primary-300:#fdf6fd;
+    --accent-100:#03C988;
+    --accent-200:#a1f9d0;
+    --text-100:#EEEEEE;
+    --text-200:#FDEBED;
+    --bg-100:#2B2E4A;
+    --bg-200:#53354A;
+    --bg-300:#31355b;
+}
+
+body {
+    background-color: var(--bg-100);
+    color: var(--primary-300);
+}
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal form{
+    margin: auto;
+    margin-top:20vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+
+}
