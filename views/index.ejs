@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<%- include("head.ejs") %>
+
+	<body>
+		<%- include("header.ejs") %>
+		<%- include("modal.ejs") %>
+		<div class="wrapper">
+		<% posts.forEach(post=> { %>
+			<div class="post">
+				<h2>
+					<%= post.title %>
+				</h2>
+				<p>
+					<%= post.description %>
+				</p>
+			</div>
+			<% }) %>
+		</div>
+		<button class="open">+</button>
+		<%- include("footer.ejs") %>
+	</body>
+
+</html>

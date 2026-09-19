@@ -5,9 +5,12 @@ let posts = []
 
 app.use(express.static("static"))
 app.use(express.json())
+app.set("view engine", "ejs")
+app.set("views", "views")
 
 app.get("/", (req, res) =>{
-    res.send("helloworld!")
+    // res.send("helloworld!")
+    res.render("index", { posts})
 })
 
 
@@ -27,7 +30,10 @@ app.get("/posts", (req, res) =>{
 )
 
 
-
+app.use((req, res) =>{
+    res.status(404)
+    res.render("notfound", {title: "404 Not Found"})
+})
 
 
 
