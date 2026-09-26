@@ -6,16 +6,9 @@ document.querySelector(".close").addEventListener("click", () => modal.style.dis
 
 document.querySelector(".modal form").addEventListener("submit", (e) => {
     e.preventDefault()
-    let data = {
-        title: event.target["title"].value,
-        description: event.target["description"].value,
-    }
     fetch("add", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
+        body: new FormData(e.target)
     }).then(location.reload())
 })
 // let wrapper = document.querySelector(".wrapper")
