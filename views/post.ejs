@@ -14,6 +14,10 @@
 				<p>
 					<%= post.description %>
 				</p>
+				<div class="images">
+					<% post.image.forEach(image => { %>
+						<img src="<%=i %>">
+					<% }) %>
 				<img src="/uploads/<%= post.image ? post.image[0] : '' %>" alt="">
 			</div>
 			<% }) %>

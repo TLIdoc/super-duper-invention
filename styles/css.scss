@@ -1,0 +1,109 @@
+// @import "./base/clearDefaults.scss";
+@import "./base/colors.scss";
+@import "./base/typography.scss";
+@import "./components/modal.scss";
+
+body {
+    background-color: $--bg-100;
+    color: $--primary-300;
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    background-color: $--primary-200;
+    padding: 1em;
+    text-align: center;
+}
+
+
+input[name="title"] {
+    color: $--primary-100;
+}
+
+input[name="description"] {
+    color: $--accent-100;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2em;
+    color: $--accent-100;
+}
+
+header {
+    background-color: $--bg-300;
+    padding: 1em;
+}
+
+
+header h5 {
+    text-align: center;
+    font-size: 1em;
+    color: $--accent-200;
+}
+
+
+.open {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: $--accent-100;
+    color: $--text-100;
+    font-size: 2em;
+    text-align: center;
+    line-height: 3em;
+    cursor: pointer;
+}
+
+
+#image {
+    display: none;
+
+}
+
+.upload {
+    background-color: $--accent-200;
+    padding: 0.3em;
+    border: 1px solid $--primary-200;
+    width: 100%;
+}
+.close {
+                position: absolute;
+                top: 49.2rem;
+                right: 4em;
+                background-color: $--primary-100;
+                color: $--text-100;
+                border: none;
+                border-radius: 50%;
+                width: 2em;
+                height: 2em;
+                font-size: 1.5em;
+                text-align: center;
+                line-height: 2em;
+                cursor: pointer;
+                line-height: 0.5em;
+            }
+.close:hover {
+    animation: aggressive-shake 0.1s infinite alternate;
+    display: inline-block; 
+}
+
+@keyframes aggressive-shake {
+    0% { transform: translate(8px, 6px) rotate(0deg) scale(1.05); }
+    10% { transform: translate(-6px, -8px) rotate(-4deg); }
+    20% { transform: translate(-6px, 0px) rotate(6deg); }
+    30% { transform: translate(0px, 8px) rotate(0deg); }
+    40% { transform: translate(6px, -6px) rotate(2deg) scale(0.95); }
+    50% { transform: translate(-6px, 8px) rotate(-6deg); }
+    60% { transform: translate(-6px, 6px) rotate(0deg); }
+    70% { transform: translate(8px, 6px) rotate(-4deg) scale(1.05); }
+    80% { transform: translate(-6px, -6px) rotate(8deg); }
+    90% { transform: translate(8px, 8px) rotate(0deg); }
+    100% { transform: translate(6px, -8px) rotate(-8deg) scale(1.0); }
+}

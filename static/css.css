@@ -1,129 +1,187 @@
-:root {
-    --primary-100:#E84545;
-    --primary-200:#903749;
-    --primary-300:#fdf6fd;
-    --accent-100:#03C988;
-    --accent-200:#a1f9d0;
-    --text-100:#EEEEEE;
-    --text-200:#FDEBED;
-    --bg-100:#2B2E4A;
-    --bg-200:#53354A;
-    --bg-300:#31355b;
+@font-face {
+  font-family: CR;
+  src: url(CR.ttf);
+}
+.modal {
+  position: fixed;
+  top: 3em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba0, 0, 0, 0.5;
+}
+.modal form {
+  margin: auto;
+  margin-top: 20vh;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+.modal form input {
+  background-color: rgb(255, 245, 226);
+}
+.modal form input,
+.modal form textarea {
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.3em;
+}
+.modal form button {
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.3em;
+  background-color: #2B2E4A;
+  color: #EEEEEE;
+  cursor: pointer;
+}
+.modal form button h2 {
+  font-size: xx-large;
+  animation: fadeUp 1s cubic-bezier 0.25, 1, 0.5, 1 forwards;
+}
+.modal form button .open {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color: #03C988;
+  color: #EEEEEE;
+  font-size: 2em;
+  text-align: center;
+  line-height: 3em;
+  cursor: pointer;
 }
 
 body {
-    background-color: var(--bg-100);
-    color: var(--primary-300);
-    font-family: "Arial", sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  background-color: #2B2E4A;
+  color: #fdf6fd;
+  font-family: CR, monospace;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-.modal {
-    position: fixed;
-    top: 3em;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-        position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.modal form{
-    margin: auto;
-    margin-top:20vh;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3em;
-}
-.modal input {
-    background-color: rgb(255, 245, 226);
-}
-.close {
-    position: absolute;
-    top: 49.2rem;
-    right: 4em;
-    background-color: var(--primary-100);
-    color: var(--text-100);
-    border: none;
-    border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    font-size: 1.5em;
-    text-align: center;
-    line-height: 2em;
-    cursor: pointer;
-    line-height: 0.5em;
-}
-input[name="title"] {
-    color: var(--primary-100);
-}
-input[name="description"] {
-    color: var(--accent-100);
-}
-header h1 {
-    text-align: center;
-    font-size: 2em;
-    color: var(--accent-100);
-}
-header {
-    background-color: var(--bg-300);
-    padding: 1em;
-}
-    form h2 {
-    font-size: xx-large;
-animation: fadeUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    }
-header h5 {
-    text-align: center;
-    font-size: 1em;
-    color: var(--accent-200);
-}
-.modal form input, .modal form textarea {
-    padding: 0.5em;
-    border: none;
-    border-radius: 0.3em;
-}
+
 footer {
-    background-color: var(--primary-200);
-    padding: 1em;
-    text-align: center;
+  background-color: #903749;
+  padding: 1em;
+  text-align: center;
 }
-.modal form button {
-    padding: 0.5em;
-    border: none;
-    border-radius: 0.3em;
-    background-color: var(--bg-100);
-    color: var(--text-100);
-    cursor: pointer;
+
+input[name=title] {
+  color: #E84545;
 }
+
+input[name=description] {
+  color: #03C988;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #03C988;
+}
+
+header {
+  background-color: #31355b;
+  padding: 1em;
+}
+
+header h5 {
+  text-align: center;
+  font-size: 1em;
+  color: #a1f9d0;
+}
+
 .open {
-    position: fixed;
-    bottom: 1em;
-    right: 1em;
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    background-color: var(--accent-100);
-    color: var(--text-100);
-    font-size: 2em;
-    text-align: center;
-    line-height: 3em;
-    cursor: pointer;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color: #03C988;
+  color: #EEEEEE;
+  font-size: 2em;
+  text-align: center;
+  line-height: 3em;
+  cursor: pointer;
 }
 
 #image {
-    display: none;
+  display: none;
+}
 
-}
 .upload {
-    background-color: var(--accent-200);
-    padding: 0.3em;
-    border: 1px solid var(--primary-200);
-    width: 100%;
+  background-color: #a1f9d0;
+  padding: 0.3em;
+  border: 1px solid #903749;
+  width: 100%;
 }
+
+.close {
+  position: absolute;
+  top: 49.2rem;
+  right: 4em;
+  background-color: #E84545;
+  color: #EEEEEE;
+  border: none;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 2em;
+  cursor: pointer;
+  line-height: 0.5em;
+}
+
+.close:hover {
+  animation: aggressive-shake 0.1s infinite alternate;
+  display: inline-block;
+}
+
+@keyframes aggressive-shake {
+  0% {
+    transform: translate(8px, 6px) rotate(0deg) scale(1.05);
+  }
+  10% {
+    transform: translate(-6px, -8px) rotate(-4deg);
+  }
+  20% {
+    transform: translate(-6px, 0px) rotate(6deg);
+  }
+  30% {
+    transform: translate(0px, 8px) rotate(0deg);
+  }
+  40% {
+    transform: translate(6px, -6px) rotate(2deg) scale(0.95);
+  }
+  50% {
+    transform: translate(-6px, 8px) rotate(-6deg);
+  }
+  60% {
+    transform: translate(-6px, 6px) rotate(0deg);
+  }
+  70% {
+    transform: translate(8px, 6px) rotate(-4deg) scale(1.05);
+  }
+  80% {
+    transform: translate(-6px, -6px) rotate(8deg);
+  }
+  90% {
+    transform: translate(8px, 8px) rotate(0deg);
+  }
+  100% {
+    transform: translate(6px, -8px) rotate(-8deg) scale(1);
+  }
+}
+
+/*# sourceMappingURL=css.css.map */
